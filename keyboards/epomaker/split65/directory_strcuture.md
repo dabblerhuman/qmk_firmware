@@ -1,3 +1,40 @@
+### Direcgory structure
+QMK expects revisions to be under a rev/ directory (or equivalent revision naming supported by the keyboard).
+QMK expect keyboard for the same hardwware to be under keymaps
+
+
+- keyboard
+  - company
+    - board
+      - board.c
+      - board.h
+      - config.h
+      - rules.mk
+      - info.json
+      
+      - keymaps:
+        - default:
+          - keymap.c
+        - via:
+          - keymap.c
+        - colemakdh:
+          - config.h
+          - rules.mk
+          - info.json
+          
+      - rev:
+        - config.h
+        - rules.mk
+        - info.json
+        - keymaps
+          - devorak: 
+            - keymap.c 
+
+                
+
+
+### Not valid:
+
 keyboards/
 └── company/
     └── board/
